@@ -1,0 +1,4 @@
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Logging\bin\Debug\NationalCriminal.Search.Service.Logging.dll
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Logging\bin\Debug\NationalCriminal.Search.Service.Logging.pdb
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Logging\obj\Debug\NationalCriminal.Search.Service.Logging.dll
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Logging\obj\Debug\NationalCriminal.Search.Service.Logging.pdb

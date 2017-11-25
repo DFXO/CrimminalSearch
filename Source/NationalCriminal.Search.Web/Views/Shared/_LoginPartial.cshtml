@@ -1,0 +1,14 @@
+﻿@using NationalCriminal.Search.Web.Models.DataContext
+
+@if (Session["user"]!=null) {
+    var profile= Session["user"] as UserProfile;
+    <text>
+        <h5><font color="white">Hello, @profile.name.ToUpper()</font></h5>
+       <li>@Html.ActionLink("LogOff", "LogOff", "Account")</li>
+    </text>
+} else {
+    <ul>
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new {id = "loginLink"})</li>        
+    </ul>
+}

@@ -1,0 +1,5 @@
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Common\bin\Debug\NationalCriminal.Search.Service.Common.dll
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Common\bin\Debug\NationalCriminal.Search.Service.Common.pdb
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Common\obj\Debug\NationalCriminal.Search.Service.Common.csprojResolveAssemblyReference.cache
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Common\obj\Debug\NationalCriminal.Search.Service.Common.dll
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Common\obj\Debug\NationalCriminal.Search.Service.Common.pdb

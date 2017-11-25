@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CriminalDatabase" Class="CriminalDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=CriminalDatabase;Integrated Security=True" SettingsObjectName="NationalCriminal.Search.Service.DataAccess.Properties.Settings" SettingsPropertyName="CriminalDatabaseConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CriminalCrimeDetails" Member="CriminalCrimeDetails">
+    <Type Name="CriminalCrimeDetail">
+      <Column Name="crime_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="criminal_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crime_type" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="crime_description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="crime_datetime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="crime_location" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="crime_charges" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="fir_no" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="CriminalProfile_CriminalCrimeDetail" Member="CriminalProfile" ThisKey="criminal_id" OtherKey="criminal_id" Type="CriminalProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CriminalProfile" Member="CriminalProfiles">
+    <Type Name="CriminalProfile">
+      <Column Name="criminal_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="nickname" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="height" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="weight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ciminal_identification_marks" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="CriminalProfile_CriminalCrimeDetail" Member="CriminalCrimeDetails" ThisKey="criminal_id" OtherKey="criminal_id" Type="CriminalCrimeDetail" />
+    </Type>
+  </Table>
+</Database>

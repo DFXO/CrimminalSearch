@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationalCriminal.Search.Service", "NationalCriminal.Search.Service\NationalCriminal.Search.Service.csproj", "{F75FC517-46C0-4F5E-B0C8-DF9DB2046C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationalCriminal.Search.DataContracts", "..\..\NationalCriminal.Search.Service\NationalCriminal.Search.DataContracts\NationalCriminal.Search.DataContracts.csproj", "{209AC2E1-224F-430F-B7FD-32C2EB482EC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F75FC517-46C0-4F5E-B0C8-DF9DB2046C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F75FC517-46C0-4F5E-B0C8-DF9DB2046C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F75FC517-46C0-4F5E-B0C8-DF9DB2046C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F75FC517-46C0-4F5E-B0C8-DF9DB2046C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{209AC2E1-224F-430F-B7FD-32C2EB482EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209AC2E1-224F-430F-B7FD-32C2EB482EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209AC2E1-224F-430F-B7FD-32C2EB482EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209AC2E1-224F-430F-B7FD-32C2EB482EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

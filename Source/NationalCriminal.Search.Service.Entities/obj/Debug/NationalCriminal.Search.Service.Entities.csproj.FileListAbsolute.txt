@@ -1,0 +1,10 @@
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Entities\bin\Debug\NationalCriminal.Search.Service.Entities.dll
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Entities\bin\Debug\NationalCriminal.Search.Service.Entities.pdb
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Entities\obj\Debug\NationalCriminal.Search.Service.Entities.csprojResolveAssemblyReference.cache
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Entities\obj\Debug\NationalCriminal.Search.Service.Entities.dll
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.Service.Entities\obj\Debug\NationalCriminal.Search.Service.Entities.pdb
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.Service.Entities\bin\Debug\NationalCriminal.Search.Service.Entities.dll
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.Service.Entities\bin\Debug\NationalCriminal.Search.Service.Entities.pdb
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.Service.Entities\obj\Debug\NationalCriminal.Search.Service.Entities.csprojResolveAssemblyReference.cache
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.Service.Entities\obj\Debug\NationalCriminal.Search.Service.Entities.dll
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.Service.Entities\obj\Debug\NationalCriminal.Search.Service.Entities.pdb

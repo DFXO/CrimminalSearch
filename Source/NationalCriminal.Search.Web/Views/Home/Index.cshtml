@@ -1,0 +1,305 @@
+﻿@using System.Activities.Expressions
+@using System.Activities.Statements
+@using DotNetOpenAuth.OpenId.Extensions.AttributeExchange
+@using Validator = NationalCriminal.Search.Web.Controllers.Validator
+
+@{
+    ViewBag.Title = "Criminal Search Engine";
+}
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criminal Search</title>
+	<script src="~/Scripts/angular.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/animate.css" rel="stylesheet" />
+<link href="~/Content/style.css" rel="stylesheet" />
+   
+@section featured
+{
+
+}
+
+<body>
+    <div id="wrapper" ng-app="">
+		<div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h4>@ViewBag.Message</h4>
+                    </div>
+                    <div class="ibox-title">
+                        <h5>Criminal search form </h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+								<!-- <h3 class="m-t-none m-b">Sign in</h3> -->
+                                
+								<form role="form">
+                                    
+									<div class="form-group col-sm-3">
+										<label>Criminal Names</label> 
+										<input type="text" id="personname" class="form-control" ng-model="personname">
+										<!-- <textarea ng-model="personname" rows="5" cols="30" data-tooltip-html-unsafe="Enter" tooltip-placement="bottom"></textarea> -->
+									    </br>
+									    <input type="button" value="Add" class="plusbutton"/>
+									    <input type="button" value="Remove" class="minusbutton"/>
+                                         <input type="button" value="Clear" class="clearbutton" />
+									    <span class="help-block m-b-none text-danger">Add multiple names with comma separated. <br> ( Eg:Mahesh,Abhishek,Sachin )</span>									
+									</div>
+                                    
+									<div class="form-group col-sm-2">
+										<label>From Age </label> 
+										<input type="number" min="1" id="agefrom"class="form-control" required  ng-model="personagefrom">
+									</div>
+									
+									<div class="form-group col-sm-2">
+										<label>To Age</label> 
+										<input type="number" min="1"  id="ageto"class="form-control" required  ng-model="personageto">
+									</div>
+									
+									<div class="form-group col-sm-2">
+										<label>From Height </label> 
+										<input type="number" min="1" id="heightfrom" class="form-control" required  ng-model="personheightfrom">
+									</div>
+									
+									<div class="form-group col-sm-2">
+										<label>To Height</label> 
+										<input type="number" min="1" id="heightto" class="form-control" required  ng-model="personheightto">
+								    </div>
+
+
+								    <div class="form-group col-sm-2">
+										<label>From Weight</label> 
+										<input type="number" min="1"  id="weightfrom" class="form-control" ng-model="personweightfrom">
+									</div>
+
+
+								    <div class="form-group col-sm-2">
+								        <label>To Weight</label>
+								        <input type="number" min="1"  id="weightto" class="form-control" ng-model="personweightto">
+								    </div>
+
+                                    <div class="form-group col-sm-2">
+										<label>Sex</label> 
+										<select class="form-control" id="gender" name="sex" ng-model="personsex">
+											<option value="Male" selected>Male</option>
+											<option value="Female">Female</option>
+										</select>
+									</div>
+
+								   @* <div class="form-group col-sm-2">
+								        <label>Nationality</label>
+								        <select class="form-control" name="natinality" ng-model="personnatinality">
+								            <option value="indian" selected>Indian</option>
+								            <option value="other">Other</option>
+								        </select>
+								    </div>*@
+
+                                    <div class="form-group col-sm-2">
+										<label>Nationality</label> 
+										<input type="text" placeholder="Nationality" id="nationality" class="form-control" ng-model="personnatinality">																			
+									</div>
+
+                                    <div class="form-group col-sm-2">
+										<label>Maximum Criminal Results</label> 
+										<input type="number" min="1" id="maxcount" class="form-control" required  ng-model="maxcount">
+									</div>	
+								    <!-- <div class="form-group col-sm-12" style="text-align:center; padding-top:10px;">
+										<button class="btn btn-bg btn-primary pull-center m-t-n-xs" type="submit"><strong>Submit</strong></button>
+                                    </div> -->
+									
+                                </form>
+                            
+							</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>You submitted information. </h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+								<!-- <h3 class="m-t-none m-b">Sign in</h3> -->
+                            
+                                    <form role="criteriaform">
+
+                                        <div class="form-group col-sm-3">
+                                            <label>Criminal Name List </label>
+                                            <!-- <input type="text" placeholder="Enter name with comma" class="form-control" ng-model="personname" disabled> -->
+                                            <textarea ng-model="personname1" id="personname1" runat="server" disabled style="margin: 0px; max-width: 302px; width: 302px; max-height: 155px; height: 155px;"></textarea>
+                                            <!-- WellKnownAttributes.Name :<span ng-bind="personname"/> -->
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                            <label>Your selected From Age</label>
+                                            <span id="selectedfromage" class="form-control" disabled ng-bind="personagefrom" runat="server"></span>
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                            <label>Your selected To Age </label>
+                                            <span class="form-control" disabled ng-bind="personageto"></span>
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                            <label>Your selected From Height</label>
+                                            <span class="form-control" disabled ng-bind="personheightfrom"></span>
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                            <label>Your selected To Height</label>
+                                            <span class="form-control" disabled ng-bind="personheightto"></span>
+                                        </div>
+
+
+                                        <div class="form-group col-sm-2">
+                                            <label>Your selected From Weight</label>
+                                            <!-- <input type="number" min="15" placeholder="weight" class="form-control" disabled ng-bind="personweight"> -->
+                                            <span class="form-control" disabled ng-bind="personweightfrom"></span>
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                            <label>Your selected To Weight</label>
+                                            <!-- <input type="number" min="15" placeholder="weight" class="form-control" disabled ng-bind="personweight"> -->
+                                            <span class="form-control" disabled ng-bind="personweightto"></span>
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                            <label>Your selected Validator.Sex</label>
+                                            <span class="form-control" disabled ng-bind="personsex"></span>
+                                        </div>                                        
+
+                                        <div class="form-group col-sm-2">
+                                            <label>Your selected Nationality</label>
+                                            <span class="form-control" disabled ng-bind="personnatinality"></span>
+                                        </div>
+
+                                          <div class="form-group col-sm-2" style="text-align: center;">
+                                             <label>Maximum Criminal Results</label>
+                                             <span class="form-control" disabled ng-bind="maxcount"></span>                                             
+									      </div>	
+
+
+                                        <div class="form-group col-sm-12" style="text-align: center; padding-top: 10px;">
+                                            <button class="btn btn-bg btn-primary pull-center m-t-n-xs" type="submit" onclick="formsb();"><strong> Confirm </strong></button>
+                                        </div>
+                                  
+                                        </form>
+							</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			</div>
+		
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+        $(function () {
+            $('.plusbutton').on('click', function () {
+                if ($('#personname').val() != '') {
+                    var text1 = $('#personname');                    
+                    $('#personname1').val($('#personname1').val() + text1.val()+',');
+                    $("#personname").val("");
+                }
+                else {
+                    alert("Please enter value in name field.");
+                }
+                $("#personname").focus();
+            });
+        });     
+
+
+        $(function () {
+            $('.minusbutton').on('click', function () {
+                debugger;
+                var mySplitResult = $('#personname1').val();
+                if (mySplitResult.length > 0) {
+                    mySplitResult = mySplitResult.substring(0, mySplitResult.lastIndexOf(','));                    
+                    $('#personname1').val(mySplitResult);
+                }
+                $("#personname").focus();                
+            });
+        });
+
+        $(function () {
+            $('.clearbutton').on('click', function () {
+                $('#personname1').val("");
+                $("#personname").focus();
+            });
+        });
+
+        function formsb() {
+            debugger;
+
+            var fage = document.getElementById('agefrom').value === 'NaN' ? 0 : parseInt(document.getElementById('agefrom').value);
+            var tage=document.getElementById('ageto').value === 'NaN' ? 0 : parseInt(document.getElementById('ageto').value);
+                      
+            if (fage > tage) {
+                alert("Please enter correct age range values.");
+                return;
+            }
+            var fheight1 = parseInt(document.getElementById('heightfrom').value) === 'NaN' ? 0 : parseInt(document.getElementById('heightfrom').value);                     
+            var theight1 = parseInt(document.getElementById('heightto').value) === 'NaN' ? 0 : parseInt(document.getElementById('heightto').value);
+
+            if (fheight1 > theight1) {
+                alert("Please enter correct height range values.");
+                return;
+            }
+
+            var fweight = parseInt(document.getElementById('weightfrom').value) == 'NaN' ? 0 : parseInt(document.getElementById('weightfrom').value);          
+            var tweight = parseInt(document.getElementById('weightto').value) == 'NaN' ? 0 : parseInt(document.getElementById('weightto').value);
+         
+            if (fweight > tweight) {
+                alert("Please enter correct weight range values.");
+                return;
+            }
+
+            var sex = document.getElementById('gender').value;
+            
+            var nationality = document.getElementById('nationality').value;
+
+            var maxcount = parseInt(document.getElementById('maxcount').value);
+
+            var jsonRequest =
+                {
+                NameLists: document.getElementById('personname1').value,
+                StartAge: fage,
+                EndAge: tage,
+                StartHeight: fheight1,
+                EndHeight: theight1,
+                StartWeight: fweight,
+                EndWeight: tweight,
+                Sex:sex,
+                Nationality: nationality,
+                MaxResults: maxcount
+                }
+           
+            $.ajax({
+                url: '/Home/Index',
+                type: 'POST',
+                dataType: JSON.stringify(jsonRequest),
+                success: function (data) {
+                    $('#target').html(data.msg);
+                },
+                data: jsonRequest
+            });                      
+        }
+	</script>
+	
+    
+</body>

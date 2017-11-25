@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NationalCriminal.Search.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NationalCriminal.Search.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9089/CriminalSearch.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="CriminalSearchRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" nillable="true" type="tns:Range" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CriminalNames" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Height" nillable="true" type="tns:Range" />
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sex" type="tns:Sex" />
+      <xs:element minOccurs="0" name="Weight" nillable="true" type="tns:Range" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CriminalSearchRequest" nillable="true" type="tns:CriminalSearchRequest" />
+  <xs:complexType name="Range">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="End" type="xs:int" />
+      <xs:element minOccurs="0" name="Start" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Range" nillable="true" type="tns:Range" />
+  <xs:simpleType name="Sex">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Sex" nillable="true" type="tns:Sex" />
+</xs:schema>

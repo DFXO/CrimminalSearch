@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CriminalDB">
+  <DataContextMoniker Name="/CriminalDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6cdc3991-03be-4088-b229-f3ee7102a865" absoluteBounds="3.5, 1.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CriminalDBDataContext/CriminalCrimeDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53ab2e77-78f6-4890-9b17-c45fcd2b830a" absoluteBounds="3.515, 2.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad09f9b3-c3e8-46d9-8df2-981060c338e7" absoluteBounds="0.75, 1, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/CriminalDBDataContext/CriminalProfile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b2ced4c-d180-4092-8da3-9640ba166b7c" absoluteBounds="0.765, 1.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.79890055338542); (3.5 : 2.79890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CriminalDBDataContext/CriminalProfile/CriminalProfile_CriminalCrimeDetail" />
+      <nodes>
+        <classShapeMoniker Id="ad09f9b3-c3e8-46d9-8df2-981060c338e7" />
+        <classShapeMoniker Id="6cdc3991-03be-4088-b229-f3ee7102a865" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,1 @@
+﻿svcutil.exe /n:*,TripStreak.Flight.Search.Proxies.WrapperProfileService http://localhost:51517/userservice.svc /ct:System.Collections.Generic.List`1 /s

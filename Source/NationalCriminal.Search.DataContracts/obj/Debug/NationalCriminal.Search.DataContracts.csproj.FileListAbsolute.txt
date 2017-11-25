@@ -1,0 +1,9 @@
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.DataContracts\bin\Debug\NationalCriminal.Search.DataContracts.dll
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.DataContracts\bin\Debug\NationalCriminal.Search.DataContracts.pdb
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.DataContracts\obj\Debug\NationalCriminal.Search.DataContracts.dll
+D:\NationalCriminal.Search.Service\NationalCriminal.Search.DataContracts\obj\Debug\NationalCriminal.Search.DataContracts.pdb
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.DataContracts\bin\Debug\NationalCriminal.Search.DataContracts.dll
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.DataContracts\bin\Debug\NationalCriminal.Search.DataContracts.pdb
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.DataContracts\obj\Debug\NationalCriminal.Search.DataContracts.csprojResolveAssemblyReference.cache
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.DataContracts\obj\Debug\NationalCriminal.Search.DataContracts.dll
+C:\Users\abhishekb\Desktop\AbhishekBande-CSharpAssignment\Abhishek_Bande-CSharpAssignment\Source\NationalCriminal.Search.DataContracts\obj\Debug\NationalCriminal.Search.DataContracts.pdb
